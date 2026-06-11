@@ -15,6 +15,10 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 ## General
 alias sz="source ~/.zshrc"
 alias v="nvim"
+alias firefox="open -a Firefox"
+
+# fastfetch
+alias ff="fastfetch"
 
 ## ls
 alias ls='eza --icons'
