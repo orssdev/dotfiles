@@ -19,6 +19,7 @@ alias v="nvim"
 alias ff="fastfetch"
 alias ls='eza --icons'
 alias firefox="open -a Firefox"
+alias y="yazi"
 
 ## Git
 ### Status & Log
