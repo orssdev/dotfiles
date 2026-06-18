@@ -18,6 +18,11 @@ alias sz="source ~/.zshrc"
 alias v="nvim"
 alias ff="fastfetch"
 alias ls='eza --icons'
+alias ll='eza --icons -l'
+alias la='eza --icons -a'
+alias lla='eza --icons -la'
+alias lt='eza --icons --tree'
+alias lta='eza --icons --tree -a'
 alias firefox="open -a Firefox"
 alias y="yazi"
 
