@@ -1,9 +1,8 @@
 vim.g.mapleader = ' '
-vim.keymap.set('n', 'q', vim.cmd.q)
-vim.keymap.set('n', 'w', vim.cmd.w)
-vim.keymap.set('n', 'x', vim.cmd.x)
-vim.keymap.set('n', 'Q', vim.cmd['q!'])
+vim.keymap.set('n', '<leader>q', vim.cmd.q)
 vim.keymap.set('n', '<leader>w', vim.cmd.w)
+vim.keymap.set('n', '<leader>x', vim.cmd.x)
+vim.keymap.set('n', '<leader>Q', vim.cmd['q!'])
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { silent = true })
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { silent = true })
 vim.keymap.set('n', '<leader>d', function() vim.diagnostic.open_float({ focus = true }) end)
