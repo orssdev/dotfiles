@@ -1,5 +1,8 @@
 return {
     {
+        'artemave/workspace-diagnostics.nvim',
+    },
+    {
         'williamboman/mason.nvim',
         config = function()
             require('mason').setup()
@@ -23,6 +26,9 @@ return {
 
             vim.api.nvim_create_autocmd('LspAttach', {
                 callback = function(event)
+                    require('workspace-diagnostics').populate_workspace_diagnostics(
+                        vim.lsp.get_client_by_id(event.data.client_id), event.buf
+                    )
                     local map = function(keys, func, desc)
                         vim.keymap.set('n', keys, func, { buffer = event.buf, desc = desc })
                     end
