@@ -10,4 +10,7 @@ vim.opt.updatetime = 50
 
 vim.diagnostic.config({
 	float = { border = "rounded" },
+	virtual_text = {
+		prefix = "■",
+	},
 })
