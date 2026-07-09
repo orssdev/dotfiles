@@ -20,6 +20,19 @@ return {
                     end,
                 },
             })
+
+            vim.api.nvim_create_autocmd('LspAttach', {
+                callback = function(event)
+                    local map = function(keys, func, desc)
+                        vim.keymap.set('n', keys, func, { buffer = event.buf, desc = desc })
+                    end
+                    map('gd', vim.lsp.buf.definition, 'Go to definition')
+                    map('gr', vim.lsp.buf.references, 'Go to references')
+                    map('K', function() vim.lsp.buf.hover({ border = 'rounded' }) end, 'Hover docs')
+                    map('<leader>rn', vim.lsp.buf.rename, 'Rename')
+                    map('<leader>ca', vim.lsp.buf.code_action, 'Code action')
+                end,
+            })
         end,
     },
 }
