@@ -8,6 +8,7 @@ return {
         end,
         opts = {
             current_line_blame_opts = { delay = 0 },
+            current_line_blame_formatter = '          <author>, <author_time:%R> - <summary>',
             on_attach = function(bufnr)
                 local gs = require('gitsigns')
                 local function map(l, r, desc)
