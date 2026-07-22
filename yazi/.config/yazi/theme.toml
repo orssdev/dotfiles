@@ -1,4 +1,11 @@
-# gruvbox-dark flavor by bennyyip: https://github.com/bennyyip/gruvbox-dark.yazi
+# rose-pine flavor by Mintass: https://github.com/Mintass/rose-pine.yazi
 [flavor]
-dark = "gruvbox-dark"
-light = "gruvbox-dark"
+dark = "rose-pine"
+light = "rose-pine"
+
+# transparent background, regardless of flavor
+[app]
+overall = { bg = "reset" }
+
+[status]
+overall = { bg = "reset" }
