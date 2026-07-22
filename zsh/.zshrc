@@ -13,6 +13,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 ## General
 alias sz="source ~/.zshrc"
+alias code="codium"
 alias v="nvim"
 alias ff="fastfetch"
 alias ls='eza --icons'
