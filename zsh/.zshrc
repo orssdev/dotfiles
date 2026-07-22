@@ -77,9 +77,9 @@ alias tks="tmux kill-session"
 ## Obsidian
 alias iCloudmd="cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/iCloud"
 
-# starship
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
-eval "$(starship init zsh)"
+# # starship
+# export STARSHIP_CONFIG=~/.config/starship/starship.toml
+# eval "$(starship init zsh)"
 
 #eza
 export EZA_CONFIG_DIR="$HOME/.config/eza"
