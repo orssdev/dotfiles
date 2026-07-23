@@ -10,6 +10,8 @@
         { "before": ["<leader>", "h"],      "commands": ["workbench.action.showAllEditors"] },
         { "before": ["<leader>", "r"],      "commands": ["workbench.action.files.revert"] },
         { "before": ["<leader>", "x"],      "commands": ["workbench.actions.view.problems"] },
+        { "before": ["<leader>", "t"],      "commands": ["workbench.action.createTerminalEditor"] },
+        { "before": ["<leader>", "z"],      "commands": ["workbench.action.toggleZenMode"] },
 
         // Splits
         { "before": ["<leader>", "s", "v"], "commands": ["workbench.action.splitEditorRight"] },
