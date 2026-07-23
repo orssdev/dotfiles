@@ -1,4 +1,45 @@
 {
+    // ── Vim ──────────────────────────────────────────────────────────────────
+    "vim.leader": " ",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // Files & navigation
+        { "before": ["<leader>", "f", "f"], "commands": ["workbench.action.quickOpen"] },
+        { "before": ["<leader>", "f", "c"], "commands": ["workbench.action.showCommands"] },
+        { "before": ["<leader>", "f", "g"], "commands": ["workbench.action.findInFiles"] },
+        { "before": ["<leader>", "e"],      "commands": ["workbench.view.explorer"] },
+        { "before": ["<leader>", "h"],      "commands": ["workbench.action.showAllEditors"] },
+        { "before": ["<leader>", "r"],      "commands": ["workbench.action.files.revert"] },
+        { "before": ["<leader>", "x"],      "commands": ["workbench.actions.view.problems"] },
+
+        // Splits
+        { "before": ["<leader>", "s", "v"], "commands": ["workbench.action.splitEditorRight"] },
+        { "before": ["<leader>", "s", "h"], "commands": ["workbench.action.splitEditorDown"] },
+        { "before": ["<C-h>"], "commands": ["workbench.action.focusLeftGroup"] },
+        { "before": ["<C-j>"], "commands": ["workbench.action.focusDownGroup"] },
+        { "before": ["<C-k>"], "commands": ["workbench.action.focusUpGroup"] },
+        { "before": ["<C-l>"], "commands": ["workbench.action.focusRightGroup"] },
+
+        // LSP
+        { "before": ["g", "d"], "commands": ["editor.action.revealDefinition"] },
+        { "before": ["g", "r"], "commands": ["editor.action.goToReferences"] },
+        { "before": ["K"],      "commands": ["editor.action.showHover"] },
+        { "before": ["<leader>", "c", "a"], "commands": ["editor.action.quickFix"] },
+
+        // Clipboard
+        { "before": ["<leader>", "y"], "after": ["\"", "+", "y"] },
+
+        // Centered scroll & search
+        { "before": ["<C-d>"], "after": ["<C-d>", "z", "z"] },
+        { "before": ["<C-u>"], "after": ["<C-u>", "z", "z"] },
+        { "before": ["n"],     "after": ["n", "z", "z"] },
+        { "before": ["N"],     "after": ["N", "z", "z"] }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+        { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+        { "before": ["<leader>", "y"], "after": ["\"", "+", "y"] }
+    ],
+
     // ── Workbench ────────────────────────────────────────────────────────────
     "workbench.startupEditor": "none",
     "workbench.colorTheme": "Gruvbox Dark Hard",
