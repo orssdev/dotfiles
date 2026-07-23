@@ -55,6 +55,8 @@
 
     // ── Editor ───────────────────────────────────────────────────────────────
     "editor.minimap.enabled": false,
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.horizontal": "hidden",
     "editor.fontFamily": "'JetBrainsMono Nerd Font', Menlo, monospace",
     "editor.fontLigatures": true,
 
