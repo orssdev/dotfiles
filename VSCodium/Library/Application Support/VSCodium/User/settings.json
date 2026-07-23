@@ -44,7 +44,6 @@
     "workbench.startupEditor": "none",
     "workbench.colorTheme": "Gruvbox Dark Hard",
     "workbench.activityBar.location": "top",
-    "workbench.editor.showTabs": "none",
     "workbench.layoutControl.enabled": false,
     "workbench.browser.showInTitleBar": false,
 
@@ -158,5 +157,7 @@
         "scrollbar.shadow": "#000000",
         "window.activeBorder": "#000000",
         "window.inactiveBorder": "#000000"
-    }
+    },
+    "workbench.panel.showLabels": false,
+    "workbench.sideBar.location": "right"
 }
