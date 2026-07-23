@@ -17,12 +17,18 @@ return {
       '                                                     ',
     }
 
+    local function btn(sc, txt, keybind)
+      local b = dashboard.button(sc, txt, keybind)
+      b.opts.cursor = 2
+      return b
+    end
+
     dashboard.section.buttons.val = {
-      dashboard.button('f', '  Find file', '<cmd>Telescope find_files<cr>'),
-      dashboard.button('r', '  Recent files', '<cmd>Telescope oldfiles<cr>'),
-      dashboard.button('g', '  Live grep', '<cmd>Telescope live_grep<cr>'),
-      dashboard.button('e', '  File explorer', '<cmd>Yazi<cr>'),
-      dashboard.button('q', '  Quit', '<cmd>qa<cr>'),
+      btn('f', '  Find file', '<cmd>Telescope find_files<cr>'),
+      btn('r', '  Recent files', '<cmd>Telescope oldfiles<cr>'),
+      btn('g', '  Live grep', '<cmd>Telescope live_grep<cr>'),
+      btn('e', '  File explorer', '<cmd>Yazi<cr>'),
+      btn('q', '  Quit', '<cmd>qa<cr>'),
     }
 
     dashboard.section.footer.val = ''
@@ -35,6 +41,10 @@ return {
       { type = 'padding', val = 1 },
       dashboard.section.footer,
     }
+
+    dashboard.section.header.opts = { hl = 'AlphaHeader', position = 'center' }
+
+    vim.api.nvim_set_hl(0, 'AlphaHeader', { fg = '#cc241d' })
 
     alpha.setup(dashboard.opts)
   end,
