@@ -164,5 +164,6 @@
     },
     "workbench.panel.showLabels": false,
     "workbench.sideBar.location": "right",
-    "git.confirmSync": false
+    "git.confirmSync": false,
+    "claudeCode.preferredLocation": "panel"
 }
