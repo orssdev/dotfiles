@@ -102,3 +102,6 @@ fi
 
 # Source your static plugins file.
 source ${zsh_plugins}.zsh
+
+# Vi mode
+bindkey -v
