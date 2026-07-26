@@ -1,7 +1,7 @@
 return {
   'ThePrimeagen/harpoon',
   branch = 'harpoon2',
-  dependencies = { 'nvim-lua/plenary.nvim' },
+  dependencies = { 'nvim-lua/plenary.nvim', 'ibhagwan/fzf-lua' },
   config = function()
     local harpoon = require('harpoon')
     harpoon:setup()
@@ -11,18 +11,17 @@ return {
     vim.keymap.set('n', '<C-p>', function() harpoon:list():prev() end)
     vim.keymap.set('n', '<C-n>', function() harpoon:list():next() end)
 
-    vim.keymap.set('n', '<leader>fl', function()
-      local conf = require('telescope.config').values
-      local themes = require('telescope.themes')
-      local file_paths = {}
+    vim.keymap.set('n', '<leader>fh', function()
+      local fzf = require('fzf-lua')
+      local paths = {}
       for _, item in ipairs(harpoon:list().items) do
-        table.insert(file_paths, item.value)
+        table.insert(paths, item.value)
       end
-      require('telescope.pickers').new(themes.get_ivy({ prompt_title = 'Working List' }), {
-        finder = require('telescope.finders').new_table({ results = file_paths }),
-        previewer = conf.file_previewer({}),
-        sorter = conf.generic_sorter({}),
-      }):find()
-    end, { desc = 'Open harpoon window' })
+      fzf.fzf_exec(paths, {
+        prompt = 'Harpoon> ',
+        previewer = 'builtin',
+        actions = { ['default'] = fzf.actions.file_edit },
+      })
+    end, { desc = 'Harpoon fzf list' })
   end,
 }

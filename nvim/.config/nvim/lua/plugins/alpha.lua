@@ -24,9 +24,9 @@ return {
     end
 
     dashboard.section.buttons.val = {
-      btn('f', '  Find file', '<cmd>Telescope find_files<cr>'),
-      btn('r', '  Recent files', '<cmd>Telescope oldfiles<cr>'),
-      btn('g', '  Live grep', '<cmd>Telescope live_grep<cr>'),
+      btn('f', '  Find file', '<cmd>FzfLua files<cr>'),
+      btn('r', '  Recent files', '<cmd>FzfLua oldfiles<cr>'),
+      btn('g', '  Live grep', '<cmd>FzfLua live_grep<cr>'),
       btn('e', '  File explorer', '<cmd>Yazi<cr>'),
       btn('q', '  Quit', '<cmd>qa<cr>'),
     }
