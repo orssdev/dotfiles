@@ -1,7 +1,11 @@
 vim.g.mapleader = ' '
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { silent = true })
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { silent = true })
-vim.keymap.set('n', '<leader>d', function() vim.diagnostic.open_float({ focus = true }) end)
+vim.keymap.set('n', '<leader>dd', function() vim.diagnostic.open_float({ focus = true }) end)
+vim.keymap.set('n', '<leader>dt', function()
+  local current = vim.diagnostic.config().virtual_text
+  vim.diagnostic.config({ virtual_text = not current and { prefix = '■' } or false })
+end, { desc = 'Toggle diagnostic virtual text' })
 vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y')
 vim.keymap.set('n', '<leader>rw', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set('n', '<leader>nh', '<cmd>nohlsearch<cr>', { desc = 'Clear search highlight' })

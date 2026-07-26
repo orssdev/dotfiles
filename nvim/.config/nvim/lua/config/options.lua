@@ -13,6 +13,8 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 vim.opt.updatetime = 50
 vim.opt.autoread = true
+vim.opt.showtabline = 0
+vim.opt.fillchars:append({ diff = '╱' })
 
 vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
   callback = function()
@@ -24,9 +26,7 @@ vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHo
 
 vim.diagnostic.config({
   float = { border = "rounded" },
-  virtual_text = {
-    prefix = "■",
-  },
+  virtual_text = false,
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
