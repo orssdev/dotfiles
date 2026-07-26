@@ -165,5 +165,9 @@
     "workbench.panel.showLabels": false,
     "workbench.sideBar.location": "right",
     "git.confirmSync": false,
-    "claudeCode.preferredLocation": "panel"
+    "claudeCode.preferredLocation": "panel",
+    "breadcrumbs.enabled": false,
+    "editor.stickyScroll.enabled": false,
+    "editor.renderControlCharacters": false,
+    "workbench.editor.showTabs": "none"
 }
