@@ -5,6 +5,7 @@ alias v="nvim"
 alias ff="fastfetch"
 alias firefox="open -a Firefox"
 alias y="yazi"
+alias stow='stow -t "$HOME"'
 
 ## Git
 ### Status & Log
