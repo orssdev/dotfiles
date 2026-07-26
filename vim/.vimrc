@@ -4,7 +4,7 @@ let mapleader = " "
 " Syntax
 syntax enable
 filetype plugin indent on
-colorscheme unokai
+colorscheme retrobox
 
 augroup transparent_bg
   autocmd!
@@ -38,6 +38,9 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>r :e!<CR>
 nnoremap <leader>rw :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
 nnoremap <leader>nh :nohlsearch<CR>
 nnoremap <leader>sv :vsplit<CR>
