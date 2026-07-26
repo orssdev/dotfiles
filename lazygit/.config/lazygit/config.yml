@@ -33,4 +33,4 @@ gui:
 git:
   pagers:
     - colorArg: always
-      pager: delta --no-gitconfig --paging=never --line-numbers
+      pager: delta --paging=never
