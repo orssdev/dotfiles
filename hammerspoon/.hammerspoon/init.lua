@@ -5,6 +5,10 @@ hs.hotkey.bind({"ctrl"}, "2", function()
 end)
 
 hs.hotkey.bind({"ctrl"}, "3", function()
+  hs.application.launchOrFocus("VSCodium")
+end)
+
+hs.hotkey.bind({"ctrl"}, "4", function()
   hs.application.launchOrFocus("Firefox")
 end)
 
