@@ -18,6 +18,7 @@ FORMULAE=(
   fzf
   ripgrep
   fd
+  bat
   fastfetch
   yazi
   btop
