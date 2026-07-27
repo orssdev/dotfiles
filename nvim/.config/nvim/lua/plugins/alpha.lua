@@ -47,5 +47,25 @@ return {
     vim.api.nvim_set_hl(0, 'AlphaHeader', { fg = '#cc241d' })
 
     alpha.setup(dashboard.opts)
+
+    vim.api.nvim_create_autocmd('User', {
+      pattern = 'AlphaReady',
+      callback = function()
+        vim.opt_local.fillchars:append({ eob = ' ' })
+
+        local nop_keys = { '<ScrollWheelDown>', '<ScrollWheelUp>', '<C-d>', '<C-u>', '<C-f>', '<C-b>', '<C-e>', '<C-y>' }
+        for _, key in ipairs(nop_keys) do
+          vim.keymap.set('n', key, '<Nop>', { buffer = true })
+        end
+
+        vim.api.nvim_create_autocmd('BufUnload', {
+          buffer = 0,
+          once = true,
+          callback = function()
+            vim.opt_local.fillchars:remove('eob')
+          end,
+        })
+      end,
+    })
   end,
 }
