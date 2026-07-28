@@ -6,6 +6,9 @@ return {
       files = {
         cmd = 'rg --files --hidden --glob "!.git/*"',
       },
+      grep = {
+        rg_opts = "--column --line-number --no-heading --color=always --smart-case --hidden -g '!.git'",
+      },
       ui_select = {},
       lsp = {
         code_actions = {
