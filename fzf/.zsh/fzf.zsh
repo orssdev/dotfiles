@@ -14,3 +14,7 @@ eval "$(fzf --zsh)"
 bindkey -r '^[c'
 bindkey -M emacs '^F' fzf-cd-widget
 bindkey -M viins '^F' fzf-cd-widget
+
+if [[ -n "$TMUX" ]]; then
+  zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
+fi
