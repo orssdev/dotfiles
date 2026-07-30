@@ -1,2 +1,3 @@
-ctrl - 2 : open -a "iTerm"
-ctrl - 3 : open -a "Zen"
+ctrl - 1 : open -a "iTerm"
+ctrl - 2 : open -a "Zen"
+ctrl - 3 : open -a "Obsidian"
