@@ -19,7 +19,7 @@ stow <package>         # symlink one package into $HOME, e.g. `stow nvim`
 |---|---|---|
 | [nvim](nvim/README.md) | Neovim, via lazy.nvim | see package README for keymaps and plugin list |
 | [zsh](zsh/README.md) | Shell, prompt hook, plugins, aliases | see package README for plugin manager and local overrides |
-| [hammerspoon](hammerspoon/README.md) | macOS automation / global hotkeys | see package README for hotkey table |
+| [skhd](skhd/README.md) | Global hotkeys | see package README for hotkey table |
 | [starship](starship/README.md) | Prompt | two mutually exclusive variants — see package README |
 | claude | Global `CLAUDE.md` and a `/commit` slash command | commit style rules live here |
 | tmux | `tmux.conf` — mouse support, vi-style pane nav, gruvbox theme | plugins managed via tpm |
