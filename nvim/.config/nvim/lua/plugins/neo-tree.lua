@@ -10,6 +10,13 @@ return {
     },
     init = function()
       vim.g.loaded_netrwPlugin = 1
+
+      local function set_dir_hl()
+        vim.api.nvim_set_hl(0, 'NeoTreeDirectoryName', { fg = '#fbf1c7' })
+        vim.api.nvim_set_hl(0, 'NeoTreeDirectoryIcon', { fg = '#fbf1c7' })
+      end
+      set_dir_hl()
+      vim.api.nvim_create_autocmd('ColorScheme', { callback = set_dir_hl })
     end,
     keys = {
       { '<leader>e', '<cmd>Neotree toggle<cr>', desc = 'Toggle Neo-tree' },
