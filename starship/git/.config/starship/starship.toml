@@ -106,6 +106,7 @@ empty_symbol = "󰂎 "
 [directory]
 style = "bold red"
 read_only = " 󰌾"
+truncation_length = 1
 
 [hostname]
 style = "bold green"

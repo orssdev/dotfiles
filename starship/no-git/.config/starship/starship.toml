@@ -105,6 +105,7 @@ empty_symbol = "󰂎 "
 [directory]
 style = "white bold"
 read_only = " 󰌾"
+truncation_length = 1
 
 [hostname]
 ssh_symbol = " "
