@@ -70,21 +70,29 @@ Zorin = " "
 # --- VCS ---
 
 [fossil_branch]
+style = "bold blue"
 symbol = " "
 
 [git_branch]
+style = "bold blue"
 symbol = " "
 truncation_length = 15
 truncation_symbol = "…"
 
 [git_commit]
+style = "bold yellow"
 tag_symbol = '  '
 
 [hg_branch]
+style = "bold blue"
 symbol = " "
 
 [pijul_channel]
+style = "bold blue"
 symbol = " "
+
+[git_status]
+style = "bright-black"
 
 # --- System / prompt ---
 
@@ -96,9 +104,11 @@ unknown_symbol = "󰂑 "
 empty_symbol = "󰂎 "
 
 [directory]
+style = "bold red"
 read_only = " 󰌾"
 
 [hostname]
+style = "bold green"
 ssh_symbol = " "
 
 [memory_usage]
