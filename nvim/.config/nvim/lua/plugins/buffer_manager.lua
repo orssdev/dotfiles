@@ -4,6 +4,6 @@ return {
   config = function()
     require('buffer_manager').setup()
     local ui = require('buffer_manager.ui')
-    vim.keymap.set('n', '<leader>m', ui.toggle_quick_menu, { desc = 'Buffer manager' })
+    vim.keymap.set('n', '<leader>bm', ui.toggle_quick_menu, { desc = 'Buffer manager' })
   end,
 }
