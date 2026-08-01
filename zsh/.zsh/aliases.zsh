@@ -56,6 +56,3 @@ alias tat="tmux attach -t"
 alias td="tmux detach"
 alias tls="tmux list-session"
 alias tks="tmux kill-session"
-
-## Obsidian
-alias iCloudmd="cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/iCloud"
