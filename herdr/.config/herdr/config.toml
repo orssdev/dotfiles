@@ -235,7 +235,7 @@ navigate_workspace_down = ["down", "j"]
 
 # Accent color for highlights, borders, and navigation UI.
 # Accepts: hex (#89b4fa), named colors (cyan, blue, magenta), or rgb(r,g,b)
-# accent = "cyan"
+accent = "red"
 
 # Background notification popup delivery
 [ui.toast]
