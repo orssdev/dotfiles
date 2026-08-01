@@ -21,7 +21,7 @@ stow <package>         # symlink one package into $HOME, e.g. `stow nvim`
 | [zsh](zsh/README.md) | Shell, prompt hook, plugins, aliases | see package README for plugin manager and local overrides |
 | [skhd](skhd/README.md) | Global hotkeys | see package README for hotkey table |
 | [starship](starship/README.md) | Prompt | two mutually exclusive variants — see package README |
-| claude | Global `CLAUDE.md`, `/commit`, `/commit-attributed`, `/sr`, `/sr-attributed` slash commands, and `settings.json` | commit and PR/MR style rules, plus permission (allow/ask/deny) rules, live here; secrets go in gitignored `settings.local.json` |
+| claude | Global `CLAUDE.md`, `/commit`, `/commit-attributed`, `/sr`, `/sr-attributed`, `/auto` slash commands, and `settings.json` | commit and PR/MR style rules, plus permission (allow/ask/deny) rules, live here; secrets go in gitignored `settings.local.json` |
 | tmux | `tmux.conf` — mouse support, vi-style pane nav, gruvbox theme | plugins managed via tpm |
 | git | `.gitconfig` — delta as pager/diff tool (gruvbox-dark theme) | |
 | lazygit | `config.yml` | |
