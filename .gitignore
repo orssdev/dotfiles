@@ -28,3 +28,4 @@ secrets
 
 # Machine-specific overrides
 zsh/.zsh/local.zsh
+claude/.claude/settings.local.json
