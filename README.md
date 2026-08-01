@@ -27,6 +27,7 @@ stow <package>         # symlink one package into $HOME, e.g. `stow nvim`
 | lazygit | `config.yml` | |
 | bat, eza, fzf, yazi | CLI tool configs + zsh integration snippets | each ships a `.zsh/*.zsh` sourced by `zsh/.zshrc` |
 | btop | `btop.conf` | |
+| herdr | `config.toml` | terminal multiplexer/agent manager config; logs, sockets, and session state are gitignored |
 | vim | `.vimrc` fallback for plain Vim | |
 | code | VS Code / VSCodium `settings.json` | two variants, one per app |
 

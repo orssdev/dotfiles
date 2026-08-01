@@ -1,0 +1,7 @@
+herdr-client.log
+herdr-server.log
+herdr-client.sock
+herdr.sock
+session.json
+sessions/
+.plugins.lock
