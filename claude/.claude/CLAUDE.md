@@ -22,3 +22,7 @@
   - If it was merged, or you're already on `main`: switch to `main`, `git pull`, then create and switch to a new branch (`git switch -c`).
   - If it's still open: don't stack unrelated work on it — branch fresh from an updated `main` instead.
 - Branch names: `<type>/<short-description>` — same `type` values as commits, e.g. `feat/skhd-hotkeys`.
+
+# Shell tool preference
+
+- When searching via Bash, use `rg` instead of `grep` and `fd` instead of `find` — both are installed on every machine this config runs on.
