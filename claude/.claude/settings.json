@@ -16,14 +16,19 @@
       "Bash(git switch -c:*)",
       "Bash(git fetch:*)",
       "Bash(git pull:*)",
+      "Bash(git remote get-url:*)",
+      "Bash(git switch main:*)",
       "Bash(git push origin HEAD:*)",
+      "Bash(git push -u origin HEAD:*)",
       "Bash(git worktree:*)",
-      "Bash(npm run:*)",
-      "Bash(npm test:*)",
-      "Bash(pytest:*)",
+      "Bash(rg:*)",
+      "Bash(fd:*)",
       "Bash(gh pr create:*)",
       "Bash(gh pr view:*)",
-      "Bash(gh pr diff:*)"
+      "Bash(gh pr diff:*)",
+      "Bash(glab mr create:*)",
+      "Bash(glab mr view:*)",
+      "Bash(glab mr diff:*)"
     ],
     "ask": [
       "Bash(git push:*)",
@@ -36,7 +41,9 @@
       "Bash(git merge:*)",
       "Bash(rm -rf:*)",
       "Bash(gh pr merge:*)",
-      "Bash(gh repo delete:*)"
+      "Bash(gh repo delete:*)",
+      "Bash(glab mr merge:*)",
+      "Bash(glab repo delete:*)"
     ],
     "deny": [
       "Read(./.env)",
