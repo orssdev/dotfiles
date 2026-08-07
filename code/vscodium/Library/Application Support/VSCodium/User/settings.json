@@ -1,0 +1,173 @@
+{
+    // ── Vim ──────────────────────────────────────────────────────────────────
+    "vim.leader": " ",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // Files & navigation
+        { "before": ["<leader>", "f", "f"], "commands": ["workbench.action.quickOpen"] },
+        { "before": ["<leader>", "f", "c"], "commands": ["workbench.action.showCommands"] },
+        { "before": ["<leader>", "f", "g"], "commands": ["workbench.action.findInFiles"] },
+        { "before": ["<leader>", "e"],      "commands": ["workbench.view.explorer"] },
+        { "before": ["<leader>", "h"],      "commands": ["workbench.action.showAllEditors"] },
+        { "before": ["<leader>", "r"],      "commands": ["workbench.action.files.revert"] },
+        { "before": ["<leader>", "x"],      "commands": ["workbench.actions.view.problems"] },
+        { "before": ["<leader>", "t"],      "commands": ["workbench.action.createTerminalEditor"] },
+        { "before": ["<leader>", "z"],      "commands": ["workbench.action.toggleZenMode"] },
+
+        // Splits
+        { "before": ["<leader>", "s", "v"], "commands": ["workbench.action.splitEditorRight"] },
+        { "before": ["<leader>", "s", "h"], "commands": ["workbench.action.splitEditorDown"] },
+        { "before": ["<C-h>"], "commands": ["workbench.action.focusLeftGroup"] },
+        { "before": ["<C-j>"], "commands": ["workbench.action.focusDownGroup"] },
+        { "before": ["<C-k>"], "commands": ["workbench.action.focusUpGroup"] },
+        { "before": ["<C-l>"], "commands": ["workbench.action.focusRightGroup"] },
+
+        // LSP
+        { "before": ["g", "d"], "commands": ["editor.action.revealDefinition"] },
+        { "before": ["g", "r"], "commands": ["editor.action.goToReferences"] },
+        { "before": ["K"],      "commands": ["editor.action.showHover"] },
+        { "before": ["<leader>", "c", "a"], "commands": ["editor.action.quickFix"] },
+
+        // Clipboard
+        { "before": ["<leader>", "y"], "after": ["\"", "+", "y"] },
+
+        // Centered scroll & search
+        { "before": ["<C-d>"], "after": ["<C-d>", "z", "z"] },
+        { "before": ["<C-u>"], "after": ["<C-u>", "z", "z"] },
+        { "before": ["n"],     "after": ["n", "z", "z"] },
+        { "before": ["N"],     "after": ["N", "z", "z"] }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+        { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+        { "before": ["<leader>", "y"], "after": ["\"", "+", "y"] }
+    ],
+
+    // ── Workbench ────────────────────────────────────────────────────────────
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "workbench.activityBar.location": "top",
+    "workbench.layoutControl.enabled": false,
+    "workbench.browser.showInTitleBar": false,
+
+    // ── Window ───────────────────────────────────────────────────────────────
+    "window.titleBarStyle": "custom",
+    "window.commandCenter": false,
+
+    // ── Editor ───────────────────────────────────────────────────────────────
+    "editor.minimap.enabled": false,
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', Menlo, monospace",
+    "editor.fontLigatures": true,
+
+    // ── Terminal ─────────────────────────────────────────────────────────────
+    "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font Mono'",
+    "terminal.integrated.gpuAcceleration": "on",
+    "terminal.integrated.fontLigatures": true,
+    "terminal.integrated.cursorStyle": "block",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.smoothScrolling": true,
+    "terminal.integrated.scrollback": 10000,
+    "terminal.integrated.mouseWheelZoom": true,
+    "terminal.integrated.stickyScroll.enabled": true,
+    // Gutter marks for command success/failure (required for sticky scroll)
+    "terminal.integrated.shellIntegration.decorationsEnabled": "both",
+    // Disable color auto-adjustment so shell theme colors render as-is
+    "terminal.integrated.minimumContrastRatio": 1,
+    "terminal.integrated.initialHint": false,
+
+    // ── Git ────────────────────────────────────────────────────────────────
+    "git.blame.editorDecoration.enabled": true,
+    "git.blame.statusBarItem.enabled": true,
+
+    // ── Security ─────────────────────────────────────────────────────────────
+    "security.workspace.trust.untrustedFiles": "open",
+
+    // ── Color overrides (force black backgrounds over theme) ─────────────────
+    "workbench.colorCustomizations": {
+
+        // Editor
+        "editor.background": "#000000",
+        "editorGutter.background": "#000000",
+        "editorGroupHeader.noTabsBackground": "#000000",
+        "editorGroupHeader.tabsBackground": "#000000",
+        "editorGroup.border": "#000000",
+        "breadcrumb.background": "#000000",
+
+        // Sidebar (primary — file explorer)
+        "sideBar.background": "#000000",
+        "sideBar.border": "#000000",
+        "sideBarTitle.background": "#000000",
+        "sideBarSectionHeader.background": "#000000",
+        "sideBarSectionHeader.border": "#000000",
+
+        // Sidebar (secondary — open editors, outline, etc.)
+        "secondarySideBar.background": "#000000",
+        "secondarySideBar.border": "#000000",
+        "secondarySideBarTitle.background": "#000000",
+        "secondarySideBarSectionHeader.background": "#000000",
+        "secondarySideBarSectionHeader.border": "#000000",
+
+        // Activity bar — activityBarTop.* applies when position is set to top
+        "activityBar.background": "#000000",
+        "activityBar.border": "#000000",
+        "activityBarTop.background": "#000000",
+        "activityBarTop.border": "#000000",
+
+        // Title bar
+        "titleBar.activeBackground": "#000000",
+        "titleBar.inactiveBackground": "#000000",
+        "titleBar.border": "#000000",
+
+        // Status bar
+        "statusBar.background": "#000000",
+        "statusBar.border": "#000000",
+
+        // Panel (terminal / output / problems)
+        "panel.background": "#000000",
+        "panel.border": "#000000",
+        "terminal.background": "#000000",
+
+        // Tabs
+        "tab.activeBackground": "#000000",
+        "tab.inactiveBackground": "#000000",
+        "tab.border": "#000000",
+
+        // Lists & trees (slightly off-black so selections are visible)
+        "list.activeSelectionBackground": "#1a1a1a",
+        "list.hoverBackground": "#111111",
+
+        // Inputs & dropdowns
+        "input.background": "#0d0d0d",
+        "dropdown.background": "#0d0d0d",
+
+        // Overlays: notifications, command palette, hover widgets, peek
+        "notifications.background": "#000000",
+        "notificationCenter.border": "#000000",
+        "quickInput.background": "#000000",
+        "quickInputList.focusBackground": "#1a1a1a",
+        "editorWidget.background": "#000000",
+        "editorHoverWidget.background": "#000000",
+        "peekView.border": "#000000",
+        "peekViewResult.background": "#000000",
+        "peekViewEditor.background": "#000000",
+
+        // Multi-diff editor (git commit / history diff view)
+        "multiDiffEditor.background": "#000000",
+        "multiDiffEditor.headerBackground": "#000000",
+        "multiDiffEditor.border": "#000000",
+
+        // Misc
+        "scrollbar.shadow": "#000000",
+        "window.activeBorder": "#000000",
+        "window.inactiveBorder": "#000000"
+    },
+    "workbench.panel.showLabels": false,
+    "workbench.sideBar.location": "right",
+    "git.confirmSync": false,
+    "claudeCode.preferredLocation": "panel",
+    "breadcrumbs.enabled": false,
+    "editor.stickyScroll.enabled": false,
+    "editor.renderControlCharacters": false,
+    "workbench.editor.showTabs": "none"
+}
