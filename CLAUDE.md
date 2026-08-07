@@ -26,6 +26,7 @@ Personal macOS dotfiles managed with [GNU Stow](https://www.gnu.org/software/sto
 Global CLAUDE.md's per-task branch-and-PR flow assumes a reviewed, multi-contributor repo. This one doesn't need that overhead:
 
 - All work commits directly to a single long-lived `develop` branch — never create per-task feature branches.
+- Before starting new work: confirm you're on `develop` (`git branch --show-current`) and run `git pull` to stay current with the remote.
 - Never commit or push directly to `main`.
 - `/sr` pushes `develop` and opens (or updates) one PR/MR into `main` — no new branch needed, and don't create one.
 
