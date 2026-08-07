@@ -30,6 +30,15 @@
       "Bash(glab mr view:*)",
       "Bash(glab mr diff:*)"
     ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(**/.ssh/**)",
+      "Read(**/*.pem)",
+      "Read(**/id_rsa*)",
+      "Bash(git push origin main:*)",
+      "Bash(git push origin master:*)"
+    ],
     "ask": [
       "Bash(git push:*)",
       "Bash(git push --force:*)",
@@ -44,15 +53,7 @@
       "Bash(gh repo delete:*)",
       "Bash(glab mr merge:*)",
       "Bash(glab repo delete:*)"
-    ],
-    "deny": [
-      "Read(./.env)",
-      "Read(./.env.*)",
-      "Read(**/.ssh/**)",
-      "Read(**/*.pem)",
-      "Read(**/id_rsa*)",
-      "Bash(git push origin main:*)",
-      "Bash(git push origin master:*)"
     ]
-  }
+  },
+  "tui": "fullscreen"
 }
