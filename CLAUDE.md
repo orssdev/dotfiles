@@ -19,14 +19,20 @@ Personal macOS dotfiles managed with [GNU Stow](https://www.gnu.org/software/sto
 - **starship has two mutually exclusive variants** (`starship/git`, `starship/no-git`) sharing the same target paths — stowing both at once conflicts. `git/` is the full-featured everyday prompt; `no-git/` disables git status segments for slow/networked filesystems.
 - **zsh load order**: `.zprofile` sets up Homebrew shellenv (login shell); `.zshrc` sources every file in `~/.zsh/*.zsh`, which includes both this package's own files (`exports.zsh`, `plugins.zsh`, `aliases.zsh`) and snippets shipped by other stowed packages (starship, eza, fzf, yazi) into the same `~/.zsh/` directory. Plugins are managed via antidote (`.zsh_plugins.txt`).
 - **Machine-specific/secret config** goes in `zsh/.zsh/local.zsh`, which is gitignored and not created by default — never commit machine-specific exports elsewhere.
-- **`claude/` package** installs the global `~/.claude/CLAUDE.md` and slash commands (`/commit`, `/commit-attributed`, `/sr`, `/sr-attributed`, `/auto`). That global CLAUDE.md — not this file — is the source of truth for how to commit, branch, and open PRs/MRs in this repo (and any other repo on the machine); don't duplicate those rules here.
+- **`claude/` package** installs the global `~/.claude/CLAUDE.md` and slash commands (`/commit`, `/commit-attributed`, `/sr`, `/sr-attributed`, `/auto`). That global CLAUDE.md is the source of truth for how to commit and open PRs/MRs generally (in this repo and any other on the machine); don't duplicate those rules here. Branching and PR titles are overridden below for this repo specifically.
+
+## Branch workflow (overrides global convention for this repo)
+
+Global CLAUDE.md's per-task branch-and-PR flow assumes a reviewed, multi-contributor repo. This one doesn't need that overhead:
+
+- All work commits directly to a single long-lived `develop` branch — never create per-task feature branches.
+- Never commit or push directly to `main`.
+- `/sr` pushes `develop` and opens (or updates) one PR/MR into `main` — no new branch needed, and don't create one.
 
 ## PR/MR titles (overrides global convention for this repo)
 
-Global CLAUDE.md's `<type>(scope): message` format assumes one coherent change. Many PRs here bundle several small, unrelated package tweaks instead — for those, skip type and message and just lead with the date and list the touched packages:
+Since every SR here bundles whatever's accumulated on `develop` rather than one coherent change, always use the date-plus-packages format, regardless of whether the commits share a type/scope:
 
 `YYYY-MM-DD: pkg1, pkg2, pkg3`
 
 e.g. `2026-08-01: nvim, zsh, starship`
-
-Single-purpose PRs (all commits share one type and scope) keep the plain global format — no date needed.

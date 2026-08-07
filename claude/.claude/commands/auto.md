@@ -2,7 +2,7 @@ Implement the following change end-to-end, fully automated: code it, commit it, 
 
 Task: $ARGUMENTS
 
-1. Follow the branch workflow rule in CLAUDE.md: `git fetch`, check the current branch's PR/MR status, and make sure you're on a fresh branch off an up-to-date `main` before making changes.
+1. Follow the branch workflow rule in CLAUDE.md before making changes (what that entails — a fresh branch off `main`, or a shared branch like `develop` — depends on the repo's CLAUDE.md).
 2. Implement the task described above.
 3. Commit following /commit-attributed: split into atomic commits per the commit style in CLAUDE.md, with Claude credited as co-author.
 4. Submit following /sr-attributed: push the branch and open a PR/MR per the PR/MR style in CLAUDE.md, with Claude credited in the description.
