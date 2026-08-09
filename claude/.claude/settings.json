@@ -55,5 +55,6 @@
       "Bash(glab repo delete:*)"
     ]
   },
-  "tui": "fullscreen"
+  "tui": "fullscreen",
+  "agentPushNotifEnabled": true
 }
