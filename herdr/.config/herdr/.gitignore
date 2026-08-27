@@ -5,3 +5,4 @@ herdr.sock
 session.json
 sessions/
 .plugins.lock
+release-notes.json
