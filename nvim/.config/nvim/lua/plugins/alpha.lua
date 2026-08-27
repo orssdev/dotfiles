@@ -27,7 +27,7 @@ return {
       btn('f', '  Find file', '<cmd>FzfLua files<cr>'),
       btn('l', '  Lazy', '<cmd>Lazy<cr>'),
       btn('g', '  Live grep', '<cmd>FzfLua live_grep<cr>'),
-      btn('e', '  File explorer', '<cmd>Neotree toggle<cr>'),
+      btn('e', '  File explorer', '<cmd>Yazi<cr>'),
       btn('q', '  Quit', '<cmd>qa<cr>'),
     }
 

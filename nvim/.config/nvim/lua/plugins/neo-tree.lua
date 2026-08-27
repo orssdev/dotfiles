@@ -9,8 +9,6 @@ return {
       { 'MunifTanjim/nui.nvim',        lazy = true },
     },
     init = function()
-      vim.g.loaded_netrwPlugin = 1
-
       local function set_dir_hl()
         vim.api.nvim_set_hl(0, 'NeoTreeDirectoryName', { fg = '#fbf1c7' })
         vim.api.nvim_set_hl(0, 'NeoTreeDirectoryIcon', { fg = '#fbf1c7' })
@@ -19,7 +17,7 @@ return {
       vim.api.nvim_create_autocmd('ColorScheme', { callback = set_dir_hl })
     end,
     keys = {
-      { '<leader>e', '<cmd>Neotree toggle<cr>', desc = 'Toggle Neo-tree' },
+      { '<leader>fe', '<cmd>Neotree toggle<cr>', desc = 'Toggle Neo-tree' },
     },
     opts = {
       filesystem = {

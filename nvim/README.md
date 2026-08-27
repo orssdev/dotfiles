@@ -12,7 +12,7 @@ Leader key is `<space>`.
 - `lua/config/lazy.lua` — lazy.nvim bootstrap/setup
 - `lua/plugins/*.lua` — one file per plugin
 
-Notable plugins: fzf-lua, neo-tree, harpoon, buffer_manager, gitsigns, lazygit.nvim, trouble, toggleterm, nvim-notify, smear-cursor, render-markdown, nvim-treesitter, blink/nvim-cmp-style completion (see `lua/plugins/completion.lua` and `lsp.lua` for the exact stack).
+Notable plugins: fzf-lua, neo-tree, yazi.nvim, harpoon, buffer_manager, gitsigns, lazygit.nvim, trouble, toggleterm, nvim-notify, smear-cursor, render-markdown, nvim-treesitter, blink/nvim-cmp-style completion (see `lua/plugins/completion.lua` and `lsp.lua` for the exact stack).
 
 LSP servers, formatters, and treesitter parsers are installed on first launch via Mason/lazy.nvim — `install.sh` deliberately does not manage those.
 
@@ -40,7 +40,8 @@ LSP servers, formatters, and treesitter parsers are installed on first launch vi
 | `<C-h/j/k/l>` | normal | move between window splits |
 | `<leader>bn` / `<leader>bp` / `<leader>bd` | normal | next/prev/delete buffer |
 | `<leader>bm` | normal | toggle buffer manager (buffer_manager.nvim) |
-| `<leader>e` | normal | toggle Neo-tree |
+| `<leader>e` | normal | open yazi (yazi.nvim) |
+| `<leader>fe` | normal | toggle Neo-tree |
 
 ### Diagnostics, LSP & formatting
 
